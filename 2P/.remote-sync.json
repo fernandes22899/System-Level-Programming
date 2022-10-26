@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "agate.cs.unh.edu",
+  "port": "22",
+  "target": "cs520/2P",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "jjf1027",
+  "password": "Winterhill22899!",
+  "watch": [],
+  "transport": "scp"
+}

@@ -1,0 +1,25 @@
+# Makefile for exception handling
+#
+
+CC = gcc
+
+CFLAGS = -g -Wall -std=c99
+
+testEH: eh.o testEH.o asm.o
+	$(CC) eh.o testEH.o asm.o -o testEH
+
+eh.o: eh.c
+	$(CC) $(CFLAGS) -c eh.c
+
+asm.o: asm.s
+	$(CC) -g -c asm.s
+
+testEH.o: testEH.c
+	$(CC) $(CFLAGS) -c testEH.c
+
+displaySource:
+	cat eh.c asm.s
+
+clean:
+	-rm -f *.o testEH
+
